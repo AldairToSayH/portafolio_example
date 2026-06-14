@@ -182,48 +182,6 @@ El formulario está en:
 ```text
 src/components/ContactForm.tsx
 ```
-
-Funciona con `mailto:` para ser compatible con GitHub Pages sin backend.
-
-Al enviar, abre el cliente de correo del visitante con el mensaje prellenado.
-
-Para envío real sin abrir cliente de correo, se puede integrar más adelante:
-
-- Formspree
-- EmailJS
-- Resend
-- Un backend propio
-
-## Configuración De GitHub Pages
-
-El archivo `astro.config.mjs` usa actualmente una URL placeholder:
-
-```js
-site: "https://example.github.io"
-```
-
-Cuando vayas a desplegar el sitio real, cambia ese valor por la URL final del repositorio.
-
-Si el repositorio es un sitio de usuario como `usuario.github.io`, no necesitas configurar `base`.
-
-Si el repositorio es un sitio de proyecto como `usuario.github.io/mi-repo`, entonces sí deberás configurar `base`.
-
-## Workflow De Deploy
-
-El workflow está en:
-
-```text
-.github/workflows/deploy.yml
-```
-
-Para usarlo:
-
-1. Sube el proyecto a GitHub.
-2. Entra a `Settings > Pages`.
-3. Selecciona `GitHub Actions` como fuente.
-4. Haz push a `main`.
-5. GitHub Actions construirá y publicará el sitio.
-
 ## Comandos
 
 ```bash
@@ -236,7 +194,5 @@ npm run preview
 ## Estado Actual
 
 - Proyecto funcional.
-- Datos personales eliminados.
-- CV personal eliminado.
 - Placeholders listos para editar.
 - Build compatible con Astro.
