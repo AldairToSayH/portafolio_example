@@ -1,0 +1,26 @@
+---
+import { certifications } from "../data/certifications";
+---
+
+<section id="certifications" class="section-padding">
+  <div class="container-shell">
+    <span class="section-eyebrow">Certificaciones</span>
+    <h2 class="section-title">Aprendizaje continuo en ciberseguridad, IA, machine learning y redes.</h2>
+    <p class="section-copy">Certificaciones que refuerzan un perfil técnico multidisciplinario y una mentalidad de aprendizaje constante.</p>
+
+    <div class="mt-12 grid gap-5 md:grid-cols-2">
+      {certifications.map((certification) => (
+        <article class="premium-card">
+          <div class="flex items-start gap-5">
+            <span class="grid h-14 w-14 flex-none place-items-center rounded-2xl border border-violet-300/20 bg-violet-300/10 font-display text-xs font-bold text-violet-100">CERT</span>
+            <div>
+              <span class="badge text-violet-100">{certification.area}</span>
+              <h3 class="mt-4 font-display text-xl font-bold text-white">{certification.name}</h3>
+              <p class="mt-2 text-sm text-slate-400">{certification.institution}</p>
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

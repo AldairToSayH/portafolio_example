@@ -1,0 +1,69 @@
+---
+import { profile } from "../data/profile";
+---
+
+<section id="home" class="relative isolate overflow-hidden pt-32 sm:pt-36 lg:pt-40">
+  <div class="absolute inset-0 -z-10 bg-aurora opacity-90"></div>
+  <div class="absolute left-1/2 top-28 -z-10 h-72 w-72 -translate-x-1/2 rounded-full bg-violet-300/10 blur-3xl animate-pulse-glow"></div>
+  <div class="absolute right-6 top-40 -z-10 hidden h-44 w-44 rounded-full border border-violet-300/20 bg-violet-400/10 blur-sm animate-float lg:block"></div>
+
+  <div class="container-shell grid min-h-[calc(100vh-8rem)] items-center gap-12 pb-20 lg:grid-cols-[1.1fr_0.9fr] lg:pb-28">
+    <div>
+      <div class="section-eyebrow">Portafolio 2026</div>
+      <h1 class="font-display text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
+        Hola, soy <span class="gradient-text">{profile.name}</span>
+      </h1>
+      <p class="mt-5 text-xl font-semibold text-violet-100 sm:text-2xl">{profile.title}</p>
+      <p class="mt-3 font-display text-2xl font-semibold text-white/90 sm:text-3xl">{profile.phrase}</p>
+      <p class="mt-7 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
+        Perfil tecnológico enfocado en ciberseguridad, desarrollo de software, datos, bases de datos y soporte TI. Edita este texto en `src/components/Hero.astro`.
+      </p>
+
+      <div class="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+        <a href="#projects" class="btn-primary">Ver proyectos</a>
+        <a href="#contact" data-audio-unlock="true" class="btn-secondary">Contáctame</a>
+        <a href={profile.cvPath} class="btn-secondary" download aria-label="Descargar CV en PDF">Descargar CV</a>
+      </div>
+
+      <div class="mt-8 flex flex-wrap items-center gap-3 text-sm text-slate-400" aria-label="Social links">
+        <a class="badge transition hover:border-violet-300/40 hover:text-white" href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
+        <a class="badge transition hover:border-violet-300/40 hover:text-white" href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="badge transition hover:border-violet-300/40 hover:text-white" href={`mailto:${profile.email}`}>Correo</a>
+      </div>
+    </div>
+
+    <div class="relative mx-auto w-full max-w-md lg:max-w-lg">
+      <div class="absolute -inset-6 rounded-[2rem] bg-gradient-to-r from-violet-300/20 to-purple-500/20 blur-2xl"></div>
+      <div class="glass-panel relative overflow-hidden rounded-[2rem] p-6">
+        <div class="absolute right-0 top-0 h-40 w-40 rounded-full bg-violet-300/10 blur-2xl"></div>
+        <div class="mb-8 flex items-center justify-between">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.24em] text-violet-200">Identidad</p>
+            <p class="mt-2 font-display text-2xl font-bold text-white">{profile.initials}</p>
+          </div>
+          <div class="rounded-full border border-emerald-300/20 bg-emerald-300/10 px-3 py-1 text-xs font-bold text-emerald-200">Disponible</div>
+        </div>
+
+        <div class="grid gap-4">
+          <div class="rounded-2xl border border-white/10 bg-white/[0.045] p-4">
+            <p class="text-xs uppercase tracking-[0.2em] text-slate-500">Enfoque actual</p>
+            <p class="mt-2 text-lg font-semibold text-white">Soluciones digitales seguras y eficientes</p>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="rounded-2xl border border-white/10 bg-white/[0.045] p-4">
+              <p class="font-display text-3xl font-bold text-violet-200">Nivel</p>
+              <p class="mt-1 text-sm text-slate-400">Académico</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-white/[0.045] p-4">
+              <p class="font-display text-3xl font-bold text-violet-200">Ubicación</p>
+              <p class="mt-1 text-sm text-slate-400">Editable</p>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-violet-300/20 bg-violet-300/10 p-4">
+            <p class="text-sm leading-6 text-violet-50">Ciberseguridad + Desarrollo + Datos + Soporte TI</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

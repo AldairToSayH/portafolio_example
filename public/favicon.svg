@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AZ favicon">
+  <rect width="64" height="64" rx="18" fill="#050711"/>
+  <rect x="1" y="1" width="62" height="62" rx="17" fill="none" stroke="#a78bfa" stroke-opacity="0.42"/>
+  <path d="M16 45 28 17h8l12 28h-8l-2.2-5.8H26.1L24 45h-8Zm12.6-12.4h6.8L32 23.3l-3.4 9.3ZM42 45l-9-13h8.1l8.9 13H42Z" fill="#e0f2fe"/>
+</svg>

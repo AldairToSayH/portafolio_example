@@ -1,0 +1,45 @@
+---
+import MobileMenu from "./MobileMenu";
+import { navLinks, profile } from "../data/profile";
+---
+
+<header
+  class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-night/75 backdrop-blur-xl"
+>
+  <div class="container-shell flex h-20 items-center justify-between">
+    <a
+      href="#home"
+      class="group inline-flex items-center gap-3"
+      aria-label="Go to home"
+    >
+      <span
+        class="grid h-11 w-11 place-items-center rounded-2xl border border-violet-300/25 bg-violet-300/10 font-display text-sm font-bold text-violet-100 shadow-glow transition group-hover:border-violet-200/50"
+      >
+        {profile.initials}
+      </span>
+      <span
+        class="hidden font-display text-sm font-bold tracking-[0.2em] text-white sm:block"
+        >YOUR NAME</span
+      >
+    </a>
+
+    <nav
+      class="hidden items-center gap-1 md:flex"
+      aria-label="Primary navigation"
+    >
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            data-audio-unlock={link.href === "#contact" ? "true" : undefined}
+            class="rounded-full px-4 py-2 text-sm font-semibold text-slate-300 transition hover:bg-white/[0.06] hover:text-white"
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <MobileMenu client:load links={navLinks} />
+  </div>
+</header>

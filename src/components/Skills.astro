@@ -1,0 +1,31 @@
+---
+import { skillGroups } from "../data/skills";
+---
+
+<section id="skills" class="section-padding relative overflow-hidden">
+  <div class="absolute left-0 top-1/2 -z-10 h-80 w-80 -translate-y-1/2 rounded-full bg-violet-500/10 blur-3xl"></div>
+  <div class="container-shell">
+    <span class="section-eyebrow">Habilidades</span>
+    <div class="flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
+      <div>
+        <h2 class="section-title">Un conjunto equilibrado de habilidades en seguridad, software, bases de datos e infraestructura.</h2>
+        <p class="section-copy">Capacidades técnicas y profesionales agrupadas para construir soluciones útiles, seguras y mantenibles.</p>
+      </div>
+    </div>
+
+    <div class="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-5">
+      {skillGroups.map((group) => (
+        <article class="premium-card flex min-h-full flex-col">
+          <div class="mb-6 flex items-center justify-between gap-4">
+            <span class="grid h-12 w-12 place-items-center rounded-2xl border border-violet-300/20 bg-violet-300/10 font-display text-xs font-bold text-violet-100">{group.signal}</span>
+          </div>
+          <h3 class="font-display text-xl font-bold text-white">{group.title}</h3>
+          <p class="mt-3 text-sm leading-6 text-slate-400">{group.description}</p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            {group.skills.map((skill) => <span class="badge">{skill}</span>)}
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

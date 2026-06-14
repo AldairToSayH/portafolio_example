@@ -1,0 +1,17 @@
+---
+import { profile } from "../data/profile";
+---
+
+<footer class="border-t border-white/10 py-10">
+  <div class="container-shell flex flex-col gap-6 text-sm text-slate-400 md:flex-row md:items-center md:justify-between">
+    <div>
+      <p>© 2026 {profile.name}. Todos los derechos reservados.</p>
+      <p class="mt-2">Construido con Astro, React y Tailwind CSS.</p>
+    </div>
+    <div class="flex flex-wrap gap-3">
+      <a class="badge transition hover:border-violet-300/40 hover:text-white" href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
+      <a class="badge transition hover:border-violet-300/40 hover:text-white" href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+      <a class="badge transition hover:border-violet-300/40 hover:text-white" href={`mailto:${profile.email}`}>Correo</a>
+    </div>
+  </div>
+</footer>

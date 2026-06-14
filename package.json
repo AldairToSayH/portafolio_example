@@ -1,0 +1,25 @@
+{
+  "name": "portfolio-website-template",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "latest",
+    "@astrojs/tailwind": "latest",
+    "astro": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "tailwindcss": "^3.4.17"
+  },
+  "devDependencies": {
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "typescript": "latest"
+  }
+}
